@@ -27,13 +27,16 @@
  * 3. This notice may not be removed or altered from any source distribution.
  *
  ******************************************************************************/
+#include <afe.h>
 #include "em_common.h"
 #include "app_assert.h"
 #include "sl_bluetooth.h"
+#include "gatt_db.h"
 #include "app.h"
 #include "cgms_timer.h"
 #include "em_cmu.h"
 #include "cgms_timer.h"
+#include "afe.h"
 
 // The advertising set handle allocated from Bluetooth stack.
 static uint8_t advertising_set_handle = 0xff;
@@ -48,8 +51,11 @@ SL_WEAK void app_init(void)
   // This is called once during start-up.                                    //
   /////////////////////////////////////////////////////////////////////////////
   ///
-   CMU_ClockEnable(cmuClock_GPIO, true);
+    CMU_ClockEnable(cmuClock_GPIO, true);
   //start up cgms timer
+
+    AFE_Init_Gpio();
+    BMS3_Driver_Init();
     cgms_timer_start();
 
 }
@@ -134,28 +140,70 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
     // Add additional event handlers here as your application requires!      //
     ///////////////////////////////////////////////////////////////////////////
     case sl_bt_evt_system_external_signal_id:
-//        if((evt->data.evt_system_external_signal.extsignals == SLEEP_TIMER_WAKEUP_EVT))
-//          {
-//
-//            current_notify();
-//            app_log_info("sleep timer wakeup evt\r\n");
-//          }
-//
-        static int cnt =0;
-
-        if((evt->data.evt_system_external_signal.extsignals == LE_MONITOR_SIGNAL))
+        if((evt->data.evt_system_external_signal.extsignals == SLEEP_TIMER_WAKEUP_EVT))
           {
-             cnt++;
+            app_log_info("sleep timer wakeup evt\r\n");
 
-             if(cnt%2)
-               GPIO_PinOutClear(BSP_GPIO_LED1_PORT, BSP_GPIO_LED1_PIN);
-             else
-               GPIO_PinOutGet(BSP_GPIO_LED1_PORT, BSP_GPIO_LED1_PIN);
+             BMS3_Driver_Init();
+//
+//            float AFE_value = BMS3_Driver_EXTI_IMEAS_INT_CFG();
+//                      app_log_info("AFE_VALUE = %d\r\n",(int32_t)(AFE_value*100));
+          }
+
+        if((evt->data.evt_system_external_signal.extsignals == BMS3_DRIVER_INT_EVT))
+          {
+
+          //  BMS3_Driver_Init();
+
+           float AFE_value = BMS3_Driver_EXTI_IMEAS_INT_CFG();
+           app_log_info("AFE_VALUE = %d\r\n",(int32_t)(AFE_value*100));
           }
 
 
-
       break;
+
+    case sl_bt_evt_gatt_server_attribute_value_id:
+
+
+         app_log_info("char handle=%d,data_len=%d\r\n",evt->data.evt_gatt_server_attribute_value.attribute,\
+                      evt->data.evt_gatt_server_attribute_value.offset);
+         // The value of the gattdb_led_control characteristic was changed.
+         if (gattdb_led_control == evt->data.evt_gatt_server_attribute_value.attribute) {
+           uint8_t data_recv;
+           size_t data_recv_len;
+           // Read characteristic value.
+           sc = sl_bt_gatt_server_read_attribute_value(gattdb_led_control,
+                                                       0,
+                                                       sizeof(data_recv),
+                                                       &data_recv_len,
+                                                       &data_recv);
+           app_log_info("len =%d\r\n",data_recv_len);
+           (void)data_recv_len;
+           app_log_status_error(sc);
+
+           if (sc != SL_STATUS_OK) {
+             break;
+           }
+
+           // Toggle LED.
+           if (data_recv == 0x00) {
+           // sl_led_turn_off(SL_SIMPLE_LED_INSTANCE(0));
+//               GPIO_PinOutClear(BSP_GPIO_LED1_PORT, BSP_GPIO_LED1_PIN);
+               GPIO_PinOutClear(BSP_GPIO_HALL_LOCK_PORT,BSP_GPIO_HALL_LOCK_PIN);
+               Afe_Chip_Disable();
+
+             app_log_info("HALL_Lock off.\n");
+           } else if (data_recv == 0x01) {
+           //  sl_led_turn_on(SL_SIMPLE_LED_INSTANCE(0));
+//               GPIO_PinOutGet(BSP_GPIO_LED1_PORT, BSP_GPIO_LED1_PIN);
+               GPIO_PinOutSet(BSP_GPIO_HALL_LOCK_PORT,BSP_GPIO_HALL_LOCK_PIN);
+               Afe_Chip_Enable();
+             app_log_info("HALL on.\n");
+           } else {
+             app_log_error("Invalid attribute value: 0x%02x\n", (int)data_recv);
+           }
+         }
+         break;
     // -------------------------------
     // Default event handler.
     default:

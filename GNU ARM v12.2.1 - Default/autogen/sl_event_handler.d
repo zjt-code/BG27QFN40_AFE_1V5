@@ -104,6 +104,7 @@ autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_api.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bgapi.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_api_compatibility.h \
+ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emdrv\gpiointerrupt\inc\gpiointerrupt.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\service\iostream\inc\sl_iostream_stdlib_config.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\security\sl_component\sl_mbedtls_support\inc\sl_mbedtls.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\service\mpu\inc\sl_mpu.h \
@@ -112,6 +113,16 @@ autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emdrv\nvm3\inc\nvm3_hal.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emdrv\common\inc\ecode.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emdrv\nvm3\inc\nvm3_default.h \
+ ../autogen/sl_spidrv_instances.h \
+ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emdrv\spidrv\inc\spidrv.h \
+ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_cmu.h \
+ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_cmu_compat.h \
+ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_gpio.h \
+ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\sli_em_cmu.h \
+ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emdrv\dmadrv\inc\dmadrv.h \
+ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_ldma.h \
+ E:\SimplicityStudio\v5_workspace\BG27QFN40_AFE_1V5\config/dmadrv_config.h \
+ E:\SimplicityStudio\v5_workspace\BG27QFN40_AFE_1V5\config/spidrv_config.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\util\third_party\mbedtls\include\psa\crypto.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\util\third_party\mbedtls\include\psa\crypto_platform.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\util\third_party\mbedtls\include\mbedtls\private_access.h \
@@ -290,6 +301,7 @@ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_ll_con
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_api.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bgapi.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_api_compatibility.h:
+d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emdrv\gpiointerrupt\inc\gpiointerrupt.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\service\iostream\inc\sl_iostream_stdlib_config.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\security\sl_component\sl_mbedtls_support\inc\sl_mbedtls.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\service\mpu\inc\sl_mpu.h:
@@ -298,6 +310,16 @@ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emdrv\nvm3\inc\nvm3_generi
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emdrv\nvm3\inc\nvm3_hal.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emdrv\common\inc\ecode.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emdrv\nvm3\inc\nvm3_default.h:
+../autogen/sl_spidrv_instances.h:
+d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emdrv\spidrv\inc\spidrv.h:
+d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_cmu.h:
+d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_cmu_compat.h:
+d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_gpio.h:
+d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\sli_em_cmu.h:
+d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emdrv\dmadrv\inc\dmadrv.h:
+d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_ldma.h:
+E:\SimplicityStudio\v5_workspace\BG27QFN40_AFE_1V5\config/dmadrv_config.h:
+E:\SimplicityStudio\v5_workspace\BG27QFN40_AFE_1V5\config/spidrv_config.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\util\third_party\mbedtls\include\psa\crypto.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\util\third_party\mbedtls\include\psa\crypto_platform.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\util\third_party\mbedtls\include\mbedtls\private_access.h:

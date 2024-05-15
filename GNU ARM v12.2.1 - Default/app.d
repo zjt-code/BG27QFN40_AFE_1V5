@@ -1,5 +1,6 @@
 app.o: ../app.c \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\common\toolchain\inc\sl_gcc_preinclude.h \
+ E:\SimplicityStudio\v5_workspace\BG27QFN40_AFE_1V5\include/afe.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_common.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\device\siliconlabs\efr32bg27\include\em_device.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\device\siliconlabs\efr32bg27\include\efr32bg27c230f768im40.h \
@@ -76,6 +77,8 @@ app.o: ../app.c \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_api.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bgapi.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_api_compatibility.h \
+ E:\SimplicityStudio\v5_workspace\BG27QFN40_AFE_1V5\autogen/gatt_db.h \
+ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sli_bt_gattdb_def.h \
  ../app.h \
  E:\SimplicityStudio\v5_workspace\BG27QFN40_AFE_1V5\include/cgms_timer.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_cmu.h \
@@ -88,6 +91,7 @@ app.o: ../app.c \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_gpio.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\sli_em_cmu.h
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\common\toolchain\inc\sl_gcc_preinclude.h:
+E:\SimplicityStudio\v5_workspace\BG27QFN40_AFE_1V5\include/afe.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_common.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\device\siliconlabs\efr32bg27\include\em_device.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\device\siliconlabs\efr32bg27\include\efr32bg27c230f768im40.h:
@@ -164,6 +168,8 @@ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_ll_con
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_api.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bgapi.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_api_compatibility.h:
+E:\SimplicityStudio\v5_workspace\BG27QFN40_AFE_1V5\autogen/gatt_db.h:
+d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sli_bt_gattdb_def.h:
 ../app.h:
 E:\SimplicityStudio\v5_workspace\BG27QFN40_AFE_1V5\include/cgms_timer.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_cmu.h:

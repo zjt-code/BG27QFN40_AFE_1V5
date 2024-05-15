@@ -2,6 +2,19 @@
 <device:XMLDevice xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:device="http://www.silabs.com/ss/hwconfig/document/device.ecore" name="pin_tool.EFR32BG27C230F768IM40" partId="mcu.arm.efr32.bg27.efr32bg27c230f768im40" contextId="com.silabs.sdk.stack.super:4.4.0._-1496660075">
   <mode name="DefaultMode">
     <property object="DefaultMode" propertyId="mode.diagramLocation" value="100, 100"/>
+    <property object="PA03" propertyId="pin.name" value=""/>
+    <property object="PA07" propertyId="pin.name" value=""/>
+    <property object="PC06" propertyId="pin.name" value=""/>
+    <property object="PORTIO" propertyId="portio.usart0.enable.clk" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.usart0.enable.rx" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.usart0.enable.tx" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.usart0.location.clk" value="5"/>
+    <property object="PORTIO" propertyId="portio.usart0.location.rx" value="7"/>
+    <property object="PORTIO" propertyId="portio.usart0.location.tx" value="6"/>
+    <property object="PTI" propertyId="ABModule.selectedRequirement" value="pti%T%SL_RAIL_UTIL_PTI%T%sl_rail_util_pti_config.h"/>
+    <property object="PTI" propertyId="ABPeripheral.included" value="true"/>
+    <property object="USART0" propertyId="ABModule.selectedRequirement" value="usart%T%SL_SPIDRV_INST0%T%sl_spidrv_inst0_config.h"/>
+    <property object="USART0" propertyId="ABPeripheral.included" value="true"/>
   </mode>
   <modeTransition>
     <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.source" value="RESET"/>

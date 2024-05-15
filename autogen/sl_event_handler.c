@@ -14,11 +14,13 @@
 #include "app_log.h"
 #include "app_timer.h"
 #include "sl_bluetooth.h"
+#include "gpiointerrupt.h"
 #include "sl_iostream_rtt.h"
 #include "sl_iostream_stdlib_config.h"
 #include "sl_mbedtls.h"
 #include "sl_mpu.h"
 #include "nvm3_default.h"
+#include "sl_spidrv_instances.h"
 #include "psa/crypto.h"
 #include "sli_protocol_crypto.h"
 #include "sl_iostream_init_instances.h"
@@ -41,6 +43,8 @@ void sl_platform_init(void)
 
 void sl_driver_init(void)
 {
+  GPIOINT_Init();
+  sl_spidrv_init_instances();
 }
 
 void sl_service_init(void)

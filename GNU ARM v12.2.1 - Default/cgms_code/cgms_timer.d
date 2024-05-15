@@ -1,7 +1,10 @@
 cgms_code/cgms_timer.o: ../cgms_code/cgms_timer.c \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\common\toolchain\inc\sl_gcc_preinclude.h \
- d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\service\sleeptimer\inc\sl_sleeptimer.h \
+ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_api.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\common\inc\sl_status.h \
+ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bgapi.h \
+ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_api_compatibility.h \
+ d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\service\sleeptimer\inc\sl_sleeptimer.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\common\inc\sl_common.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\common\inc\sl_assert.h \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\cmsis\core\include\cmsis_compiler.h \
@@ -69,8 +72,11 @@ cgms_code/cgms_timer.o: ../cgms_code/cgms_timer.c \
  d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\emlib\inc\em_core_generic.h \
  E:\SimplicityStudio\v5_workspace\BG27QFN40_AFE_1V5\config/emlib_core_debug_config.h
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\common\toolchain\inc\sl_gcc_preinclude.h:
-d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\service\sleeptimer\inc\sl_sleeptimer.h:
+d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_api.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\common\inc\sl_status.h:
+d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bgapi.h:
+d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\protocol\bluetooth\inc\sl_bt_api_compatibility.h:
+d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\service\sleeptimer\inc\sl_sleeptimer.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\common\inc\sl_common.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\common\inc\sl_assert.h:
 d:\gsdk440\gecko_sdk4.4.0.zip\gecko_sdk4.4.0\platform\cmsis\core\include\cmsis_compiler.h:
